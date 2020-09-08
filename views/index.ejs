@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Covid Tracker</title>
+</head>
+<body>
+    <div class="body">
+        
+        <% corona_cases.forEach(function(cases){ %>
+            <div class="cases">
+                <h4><%= cases.Combined_Key %> </h4>
+                <hr></hr>
+                    <p>Verified Cases: <%= cases.Confirmed %></p> 
+                    <p>Active Cases: <%= cases.Active %></p> 
+                    <p>Recoveries: <%= cases.Recovered %></p> 
+                    <p>Number of Deaths: <%= cases.Deaths %></p> 
+                 
+            </div>
+        <% }); %>
+        </div>
+
+</body>
+</html>
